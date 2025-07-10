@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
           backgroundColor: AppColors.lightBlue100, // Button background color
           padding: const EdgeInsets.symmetric(horizontal: 14), // Button padding
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20), // Rounded corners
+            borderRadius: BorderRadius.circular(15), // Rounded corners
           ),
         ),
         child: Text(buttonText, style: Styles.fontMedium18),

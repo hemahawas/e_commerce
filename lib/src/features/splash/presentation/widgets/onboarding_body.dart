@@ -1,3 +1,4 @@
+import 'package:e_commerce/src/config/routes/app_routes.dart';
 import 'package:e_commerce/src/core/shared_widgets/custom_button.dart';
 import 'package:e_commerce/src/core/themes/styles.dart';
 import 'package:e_commerce/src/core/utils/app_images.dart';
@@ -44,8 +45,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
   ];
 
   _navigate() {
-    // Navigate to the next screen when skip is pressed
-    // Navigator.of(context).pushReplacementNamed('/home');
+    Navigator.pushReplacementNamed(context, Routes.login);
   }
 
   @override

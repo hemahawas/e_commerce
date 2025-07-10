@@ -61,4 +61,10 @@ class Assets {
   /// assets/images/Logo_Splash_Screen.svg
   static const String imagesLogoSplashScreen =
       "assets/images/Logo_Splash_Screen.png";
+
+  static const String imagesLogoFacebok = "assets/images/Facebok_Icon.svg";
+
+  static const String imagesLogoGoogle = "assets/images/Google_Icon.svg";
+
+  static const String imagesLogoApple = "assets/images/Apple_Icon.svg";
 }
