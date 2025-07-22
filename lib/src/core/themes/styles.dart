@@ -47,6 +47,13 @@ abstract class Styles {
     color: Colors.white,
   );
 
+  static const TextStyle fontMedium20 = TextStyle(
+    fontSize: 20,
+    fontFamily: AppStrings.poppins,
+    fontWeight: FontWeight.w600,
+    color: AppColors.darkBlue900,
+  );
+
   static const TextStyle fontMedium24 = TextStyle(
     fontSize: 24,
     fontFamily: AppStrings.poppins,

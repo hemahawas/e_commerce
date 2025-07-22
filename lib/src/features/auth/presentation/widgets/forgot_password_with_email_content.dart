@@ -1,6 +1,7 @@
 import 'package:e_commerce/src/core/shared_widgets/custom_button.dart';
 import 'package:e_commerce/src/core/themes/styles.dart';
 import 'package:e_commerce/src/core/utils/app_images.dart';
+import 'package:e_commerce/src/features/auth/presentation/widgets/auth_appbar.dart';
 import 'package:e_commerce/src/features/auth/presentation/widgets/email_field.dart';
 import 'package:e_commerce/src/features/auth/presentation/widgets/signup_back_button.dart';
 import 'package:flutter/material.dart';
@@ -21,14 +22,7 @@ class ForgotPasswordWithEmailContent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(height: 15),
-          Row(
-            children: [
-              SizedBox(width: 15),
-              CustomBackButton(onPressed: onBackPressed),
-              SizedBox(width: 8),
-              Text('Forgot Password', style: Styles.fontMedium16),
-            ],
-          ),
+          AuthAppbar(onPressed: () => onBackPressed, text: 'Forgot Password'),
           SizedBox(height: 44),
           SvgPicture.asset(Assets.imagesIllustrationForgotPasswordWithEmail),
           SizedBox(height: 22),
@@ -43,10 +37,8 @@ class ForgotPasswordWithEmailContent extends StatelessWidget {
           SizedBox(height: 22),
           EmailField(title: 'Email'),
           SizedBox(height: 22),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 13.0),
-            child: CustomButton(buttonText: 'Send Code', onPressed: onSendCode),
-          ),
+          CustomButton(buttonText: 'Send Code', onPressed: onSendCode),
+
           SizedBox(height: 40),
         ],
       ),

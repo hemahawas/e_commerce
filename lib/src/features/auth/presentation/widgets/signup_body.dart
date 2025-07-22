@@ -46,10 +46,8 @@ class SignupBody extends StatelessWidget {
             isPasswordVisible: false,
           ),
           SizedBox(height: 14),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 13.0),
-            child: SignupButton(),
-          ),
+          SignupButton(),
+
           SizedBox(height: 5),
           Text('Or Continue With', style: Styles.fontRegular14),
           AuthPlatforms(),

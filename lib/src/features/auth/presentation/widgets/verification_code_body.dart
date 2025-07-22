@@ -1,7 +1,8 @@
 import 'package:e_commerce/src/core/shared_widgets/custom_button.dart';
 import 'package:e_commerce/src/core/themes/styles.dart';
 import 'package:e_commerce/src/core/utils/app_images.dart';
-import 'package:e_commerce/src/features/auth/presentation/widgets/signup_back_button.dart';
+import 'package:e_commerce/src/features/auth/presentation/screens/create_new_password_screen.dart';
+import 'package:e_commerce/src/features/auth/presentation/widgets/auth_appbar.dart';
 import 'package:e_commerce/src/features/auth/presentation/widgets/verification_code_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -21,13 +22,9 @@ class VerificationCodeBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: 15),
-          Row(
-            children: [
-              SizedBox(width: 15),
-              CustomBackButton(onPressed: () => Navigator.pop(context)),
-              SizedBox(width: 8),
-              Text('Forgot Password', style: Styles.fontMedium16),
-            ],
+          AuthAppbar(
+            onPressed: () => Navigator.pop(context),
+            text: 'Forgot Password',
           ),
           SizedBox(height: 44),
           SvgPicture.asset(
@@ -44,10 +41,15 @@ class VerificationCodeBody extends StatelessWidget {
           SizedBox(height: 25),
           VerificationCodeField(),
           SizedBox(height: 22),
-          Padding(
-            padding: EdgeInsetsGeometry.symmetric(horizontal: 22),
-            child: CustomButton(buttonText: 'Verify Code', onPressed: () {}),
+          CustomButton(
+            buttonText: 'Verify Code',
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => CreateNewPasswordScreen()),
+              );
+            },
           ),
+
           SizedBox(height: 22),
           Text('46:00', style: Styles.fontSemiBold16),
           SizedBox(height: 22),

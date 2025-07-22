@@ -7,6 +7,7 @@ import 'package:e_commerce/src/features/auth/presentation/widgets/login_platform
 import 'package:e_commerce/src/features/auth/presentation/widgets/navigating_to_register_view.dart';
 import 'package:e_commerce/src/features/auth/presentation/widgets/password_field.dart';
 import 'package:e_commerce/src/features/auth/presentation/widgets/rememberme_checkbox.dart';
+import 'package:e_commerce/src/features/dashboard/presentation/screens/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginBody extends StatefulWidget {
@@ -56,9 +57,13 @@ class _LoginBodyState extends State<LoginBody> {
             ),
           ),
           SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 14.0),
-            child: LoginButton(onPressed: () {}),
+          LoginButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (_) => DashboardScreen()),
+              );
+            },
           ),
           SizedBox(height: 14),
           Text('Or Continue With', style: Styles.fontRegular14),

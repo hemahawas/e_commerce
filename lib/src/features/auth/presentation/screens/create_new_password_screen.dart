@@ -1,3 +1,4 @@
+import 'package:e_commerce/src/features/auth/presentation/widgets/create_new_password_body.dart';
 import 'package:flutter/material.dart';
 
 class CreateNewPasswordScreen extends StatelessWidget {
@@ -5,6 +6,6 @@ class CreateNewPasswordScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(body: SafeArea(child: CreateNewPasswordBody()));
   }
 }

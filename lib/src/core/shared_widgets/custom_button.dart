@@ -12,7 +12,8 @@ class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14),
       height: 48,
       width: double.infinity,
       child: ElevatedButton(
