@@ -6,13 +6,41 @@ class Assets {
   /// assets/images/Apple_Icon.svg
   static const String imagesAppleIcon = "assets/images/Apple_Icon.svg";
 
+  /// Assets for imagesBellIcon
+  /// assets/images/Bell_Icon.svg
+  static const String imagesBellIcon = "assets/images/Bell_Icon.svg";
+
+  /// Assets for imagesBellWithoutNotifocationIcon
+  /// assets/images/Bell_Without_Notifocation_Icon.svg
+  static const String imagesBellWithoutNotifocationIcon = "assets/images/Bell_Without_Notifocation_Icon.svg";
+
+  /// Assets for imagesCartIconUIA
+  /// assets/images/Cart_Icon_UIA.svg
+  static const String imagesCartIconUIA = "assets/images/Cart_Icon_UIA.svg";
+
+  /// Assets for imagesDiscountRectangle
+  /// assets/images/Discount_Rectangle.svg
+  static const String imagesDiscountRectangle = "assets/images/Discount_Rectangle.svg";
+
+  /// Assets for imagesEmptyCartIcon
+  /// assets/images/Empty_Cart_Icon.svg
+  static const String imagesEmptyCartIcon = "assets/images/Empty_Cart_Icon.svg";
+
   /// Assets for imagesFacebokIcon
   /// assets/images/Facebok_Icon.svg
   static const String imagesFacebokIcon = "assets/images/Facebok_Icon.svg";
 
+  /// Assets for imagesFilterIcon
+  /// assets/images/Filter_Icon.svg
+  static const String imagesFilterIcon = "assets/images/Filter_Icon.svg";
+
   /// Assets for imagesGoogleIcon
   /// assets/images/Google_Icon.svg
   static const String imagesGoogleIcon = "assets/images/Google_Icon.svg";
+
+  /// Assets for imagesIPhone11Pro
+  /// assets/images/iPhone_11_Pro.png
+  static const String imagesIPhone11Pro = "assets/images/iPhone_11_Pro.png";
 
   /// Assets for imagesIllustrationCreateNewPassword
   /// assets/images/Illustration_Create_New_Password.svg
@@ -58,8 +86,16 @@ class Assets {
   /// assets/images/Illustration_Verification_Code_With_Phone.svg
   static const String imagesIllustrationVerificationCodeWithPhone = "assets/images/Illustration_Verification_Code_With_Phone.svg";
 
+  /// Assets for imagesJBLLogo2
+  /// assets/images/JBL_Logo_2.png
+  static const String imagesJBLLogo2 = "assets/images/JBL_Logo_2.png";
+
   /// Assets for imagesLogoSplashScreen
   /// assets/images/Logo_Splash_Screen.png
   static const String imagesLogoSplashScreen = "assets/images/Logo_Splash_Screen.png";
+
+  /// Assets for imagesOffer1
+  /// assets/images/Offer_1.png
+  static const String imagesOffer1 = "assets/images/Offer_1.png";
 }
 

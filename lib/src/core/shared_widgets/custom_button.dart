@@ -12,7 +12,8 @@ class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14),
       height: 48,
       width: double.infinity,
       child: ElevatedButton(
@@ -21,7 +22,7 @@ class CustomButton extends StatelessWidget {
           backgroundColor: AppColors.lightBlue100, // Button background color
           padding: const EdgeInsets.symmetric(horizontal: 14), // Button padding
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20), // Rounded corners
+            borderRadius: BorderRadius.circular(15), // Rounded corners
           ),
         ),
         child: Text(buttonText, style: Styles.fontMedium18),

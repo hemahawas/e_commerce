@@ -1,4 +1,4 @@
-import 'package:e_commerce/src/core/utils/app_images.dart';
+import 'package:e_commerce/src/core/shared_widgets/logo_image.dart';
 import 'package:flutter/material.dart';
 
 class SplashBody extends StatelessWidget {
@@ -6,12 +6,6 @@ class SplashBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset(
-        Assets.imagesLogoSplashScreen,
-        height: 200,
-        width: 200,
-      ),
-    );
+    return Center(child: LogoImage());
   }
 }

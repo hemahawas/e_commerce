@@ -1,7 +1,8 @@
-abstract class AppConstants {
-  AppConstants._();
+abstract class AppStrings {
+  AppStrings._();
 
   static const String appName = 'Ma7ali';
   static const String appVersion = '1.0.0';
   static const String poppins = 'Poppins';
+  static const String noRouteFound = 'No Route Found';
 }

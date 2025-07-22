@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key});
+class CartBody extends StatelessWidget {
+  const CartBody({super.key});
 
   @override
   Widget build(BuildContext context) {

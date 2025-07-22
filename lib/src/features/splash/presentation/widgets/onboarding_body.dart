@@ -1,9 +1,11 @@
+import 'package:e_commerce/src/config/routes/app_routes.dart';
 import 'package:e_commerce/src/core/shared_widgets/custom_button.dart';
 import 'package:e_commerce/src/core/themes/styles.dart';
 import 'package:e_commerce/src/core/utils/app_images.dart';
 import 'package:e_commerce/src/features/splash/models/onboarding_model.dart';
 import 'package:e_commerce/src/features/splash/presentation/widgets/onboarding_dots_row.dart';
 import 'package:e_commerce/src/features/splash/presentation/widgets/skip_button.dart';
+import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -43,70 +45,74 @@ class _OnboardingBodyState extends State<OnboardingBody> {
     ),
   ];
 
+  PageController pageController = PageController();
+
+  @override
   _navigate() {
-    // Navigate to the next screen when skip is pressed
-    // Navigator.of(context).pushReplacementNamed('/home');
+    Navigator.pushReplacementNamed(context, Routes.login);
   }
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Align(
-            alignment: Alignment.topLeft,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 16.0, left: 16.0),
-              child: SkipButton(
-                onPressed: () {
-                  _navigate();
-                },
-              ),
-            ),
-          ),
-          FittedBox(
-            fit: BoxFit.cover,
-            child: SvgPicture.asset(
-              onboardingModels[currentIndex].image,
-              height: 256,
-              width: 344.03,
-            ),
-          ),
-          SizedBox(height: 40),
-          OnboardingDotsRow(currentIndex: currentIndex),
-          SizedBox(height: 24),
-          Text(
-            onboardingModels[currentIndex].title,
-            style: Styles.fontSemiBold20,
-          ),
-          SizedBox(height: 43),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 27.0),
-            child: Text(
-              textAlign: TextAlign.center,
-              onboardingModels[currentIndex].description,
-              style: Styles.fontMedium14,
-            ),
-          ),
-          SizedBox(height: 100),
-
-          Padding(
-            padding: const EdgeInsets.all(14.0),
-            child: CustomButton(
-              buttonText: onboardingModels[currentIndex].buttonText,
+    return Column(
+      children: [
+        Align(
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 16.0, left: 16.0),
+            child: SkipButton(
               onPressed: () {
-                if (currentIndex < onboardingModels.length - 1) {
-                  setState(() {
-                    currentIndex++;
-                  });
-                } else {
-                  _navigate();
-                }
+                _navigate();
               },
             ),
           ),
-        ],
-      ),
+        ),
+        ExpandablePageView.builder(
+          scrollDirection: Axis.horizontal,
+          controller: pageController,
+          onPageChanged: (index) {
+            currentIndex = index;
+            setState(() {});
+          },
+          itemCount: 3,
+          itemBuilder: (context, index) {
+            return SvgPicture.asset(onboardingModels[currentIndex].image);
+          },
+        ),
+        SizedBox(height: 40),
+        OnboardingDotsRow(currentIndex: currentIndex),
+        SizedBox(height: 24),
+        Text(
+          onboardingModels[currentIndex].title,
+          style: Styles.fontSemiBold20,
+        ),
+        SizedBox(height: 43),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 27.0),
+          child: Text(
+            textAlign: TextAlign.center,
+            onboardingModels[currentIndex].description,
+            style: Styles.fontMedium14,
+          ),
+        ),
+        Spacer(),
+        CustomButton(
+          buttonText: onboardingModels[currentIndex].buttonText,
+          onPressed: () {
+            if (currentIndex < onboardingModels.length - 1) {
+              setState(() {
+                pageController.nextPage(
+                  duration: Duration(milliseconds: 300),
+                  curve: Curves.easeIn,
+                );
+              });
+            } else {
+              _navigate();
+            }
+          },
+        ),
+        SizedBox(height: 34),
+      ],
     );
   }
 }

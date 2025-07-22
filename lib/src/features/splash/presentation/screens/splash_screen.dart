@@ -1,4 +1,6 @@
-import 'package:e_commerce/src/features/splash/presentation/screens/onboarding_screen.dart';
+import 'dart:async';
+
+import 'package:e_commerce/src/config/routes/app_routes.dart';
 import 'package:e_commerce/src/features/splash/presentation/widgets/splash_body.dart';
 import 'package:flutter/material.dart';
 
@@ -13,19 +15,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 2), () {
       _goNext();
     });
   }
 
   _goNext() {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) {
-          return const OnboardingScreen();
-        },
-      ),
-    );
+    Navigator.pushReplacementNamed(context, Routes.onBoarding);
   }
 
   @override
