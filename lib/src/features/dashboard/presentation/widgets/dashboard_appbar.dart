@@ -9,12 +9,12 @@ class DashboardAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        ProfileImage(),
-        SizedBox(width: 10),
-        Spacer(),
+        const ProfileImage(),
+        const SizedBox(width: 10),
+        const Spacer(),
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.notifications_none, color: AppColors.lightBlue100),
+          icon: const Icon(Icons.notifications_none, color: AppColors.lightBlue100),
         ),
       ],
     );

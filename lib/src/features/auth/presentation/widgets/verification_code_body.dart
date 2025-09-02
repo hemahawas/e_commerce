@@ -21,43 +21,43 @@ class VerificationCodeBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           AuthAppbar(
             onPressed: () => Navigator.pop(context),
             text: 'Forgot Password',
           ),
-          SizedBox(height: 44),
+          const SizedBox(height: 44),
           SvgPicture.asset(
             isEmail
                 ? Assets.imagesIllustrationVerificationCodeWithEmail
                 : Assets.imagesIllustrationVerificationCodeWithPhone,
           ),
-          SizedBox(height: 22),
+          const SizedBox(height: 22),
           Text(
             'Please enter the 4 digit code sent to: $verificationInput',
             style: Styles.fontMedium16,
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 25),
-          VerificationCodeField(),
-          SizedBox(height: 22),
+          const SizedBox(height: 25),
+          const VerificationCodeField(),
+          const SizedBox(height: 22),
           CustomButton(
             buttonText: 'Verify Code',
             onPressed: () {
               Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => CreateNewPasswordScreen()),
+                MaterialPageRoute(builder: (_) => const CreateNewPasswordScreen()),
               );
             },
           ),
 
-          SizedBox(height: 22),
-          Text('46:00', style: Styles.fontSemiBold16),
-          SizedBox(height: 22),
+          const SizedBox(height: 22),
+          const Text('46:00', style: Styles.fontSemiBold16),
+          const SizedBox(height: 22),
           TextButton(
             onPressed: () {},
-            child: Text('Resend Code', style: Styles.fontSemiBold16),
+            child: const Text('Resend Code', style: Styles.fontSemiBold16),
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
         ],
       ),
     );

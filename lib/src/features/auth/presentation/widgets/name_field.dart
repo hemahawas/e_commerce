@@ -6,7 +6,7 @@ class NameField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomTextFormField(
+    return const CustomTextFormField(
       title: 'Your Name',
       hintText: 'Full Name',
       prefixIcon: Icon(Icons.person_add_alt_rounded),

@@ -11,14 +11,14 @@ class NavigatingToRegisterView extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('Are you new in Marketi', style: Styles.fontMedium14),
+        const Text('Are you new in Marketi', style: Styles.fontMedium14),
         MaterialButton(
           minWidth: 80,
           padding: EdgeInsets.zero,
           onPressed: () {
             Navigator.of(
               context,
-            ).push(MaterialPageRoute(builder: (_) => SignupScreen()));
+            ).push(MaterialPageRoute(builder: (_) => const SignupScreen()));
           },
           child: Text(
             'register?',

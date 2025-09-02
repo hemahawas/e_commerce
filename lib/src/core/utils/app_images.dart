@@ -67,4 +67,5 @@ class Assets {
   static const String imagesLogoGoogle = "assets/images/Google_Icon.svg";
 
   static const String imagesLogoApple = "assets/images/Apple_Icon.svg";
+  static const String imagesOffer1 = "assets/images/Offer_1.png";
 }

@@ -6,6 +6,6 @@ class VerificationCodeField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Pinput();
+    return const Pinput();
   }
 }

@@ -6,7 +6,7 @@ class PhoneField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomTextFormField(
+    return const CustomTextFormField(
       inputType: TextInputType.phone,
       title: 'Phone Number',
       hintText: '+20 1501142409',

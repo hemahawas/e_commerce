@@ -15,11 +15,11 @@ class CustomBackButton extends StatelessWidget {
           padding: const EdgeInsets.all(10), // Button padding
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
-            side: BorderSide(color: AppColors.lightBlue700),
+            side: const BorderSide(color: AppColors.lightBlue700),
           ),
         ),
         onPressed: onPressed,
-        child: Icon(Icons.keyboard_arrow_left_rounded, size: 35),
+        child: const Icon(Icons.keyboard_arrow_left_rounded, size: 35),
       ),
     );
   }

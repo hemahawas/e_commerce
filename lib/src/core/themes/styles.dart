@@ -25,6 +25,12 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     color: AppColors.navy,
   );
+  static const TextStyle fontSemiBold12 = TextStyle(
+    fontSize: 12,
+    fontFamily: AppStrings.poppins,
+    fontWeight: FontWeight.w600,
+    color: AppColors.lightBlue100,
+  );
 
   static const TextStyle fontMedium14 = TextStyle(
     fontSize: 14,

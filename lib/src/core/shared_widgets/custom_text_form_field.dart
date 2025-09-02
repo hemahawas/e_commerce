@@ -35,7 +35,7 @@ class CustomTextFormField extends StatelessWidget {
                 title!,
                 style: Styles.fontSemiBold20.copyWith(fontSize: 12),
               )
-              : SizedBox.shrink(),
+              : const SizedBox.shrink(),
           TextFormField(
             obscureText: isPassword ?? false,
             cursorColor: AppColors.lightBlue700,
@@ -46,20 +46,20 @@ class CustomTextFormField extends StatelessWidget {
               prefixIcon: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  SizedBox(width: 14),
+                  const SizedBox(width: 14),
                   prefixIcon,
-                  SizedBox(width: 12),
-                  secondPrefixIcon ?? SizedBox.shrink(),
+                  const SizedBox(width: 12),
+                  secondPrefixIcon ?? const SizedBox.shrink(),
                 ],
               ),
               suffixIcon: suffixIcon,
               hintStyle: Styles.fontRegular12,
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppColors.lightBlue700, width: 2),
+                borderSide: const BorderSide(color: AppColors.lightBlue700, width: 2),
                 borderRadius: BorderRadius.circular(20),
               ),
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppColors.lightBlue700, width: 2),
+                borderSide: const BorderSide(color: AppColors.lightBlue700, width: 2),
                 borderRadius: BorderRadius.circular(20),
               ),
             ),
