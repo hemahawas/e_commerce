@@ -26,10 +26,10 @@ class _LoginBodyState extends State<LoginBody> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Padding(padding: EdgeInsets.only(top: 80.0), child: LogoImage()),
-          SizedBox(height: 32),
-          EmailField(),
-          SizedBox(height: 14),
+          const Padding(padding: EdgeInsets.only(top: 80.0), child: LogoImage()),
+          const SizedBox(height: 32),
+          const EmailField(),
+          const SizedBox(height: 14),
           PasswordField(
             changeVisibility: () {
               setState(() {
@@ -38,7 +38,7 @@ class _LoginBodyState extends State<LoginBody> {
             },
             isPasswordVisible: isPasswordVisible,
           ),
-          SizedBox(height: 6),
+          const SizedBox(height: 6),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 22.0),
             child: Row(
@@ -51,26 +51,26 @@ class _LoginBodyState extends State<LoginBody> {
                     });
                   },
                 ),
-                Spacer(),
-                ForgotPasswordButton(),
+                const Spacer(),
+                const ForgotPasswordButton(),
               ],
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           LoginButton(
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (_) => DashboardScreen()),
+                MaterialPageRoute(builder: (_) => const DashboardScreen()),
               );
             },
           ),
-          SizedBox(height: 14),
-          Text('Or Continue With', style: Styles.fontRegular14),
-          SizedBox(height: 16),
-          AuthPlatforms(),
-          SizedBox(height: 14),
-          NavigatingToRegisterView(),
+          const SizedBox(height: 14),
+          const Text('Or Continue With', style: Styles.fontRegular14),
+          const SizedBox(height: 16),
+          const AuthPlatforms(),
+          const SizedBox(height: 14),
+          const NavigatingToRegisterView(),
         ],
       ),
     );

@@ -6,7 +6,7 @@ class UserNameField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomTextFormField(
+    return const CustomTextFormField(
       hintText: 'Username',
       title: 'Username',
       prefixIcon: Icon(Icons.person_rounded),

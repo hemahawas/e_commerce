@@ -24,25 +24,25 @@ class ForgetPasswordWithPhoneContent extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           AuthAppbar(onPressed: () => onBackPressed, text: 'Forgot Password'),
-          SizedBox(height: 44),
+          const SizedBox(height: 44),
           SvgPicture.asset(Assets.imagesIllustrationForgotPasswordWithPhone),
-          SizedBox(height: 22),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 22.0),
+          const SizedBox(height: 22),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 22.0),
             child: Text(
               textAlign: TextAlign.center,
               'Please enter your phone number to receive a verification code',
               style: Styles.fontMedium16,
             ),
           ),
-          SizedBox(height: 22),
-          PhoneField(),
-          SizedBox(height: 22),
+          const SizedBox(height: 22),
+          const PhoneField(),
+          const SizedBox(height: 22),
           CustomButton(buttonText: 'Send Code', onPressed: onSendCode),
 
-          SizedBox(height: 22),
+          const SizedBox(height: 22),
           TextButton(
             onPressed: onTryAnotherWay,
             child: Text(
@@ -53,7 +53,7 @@ class ForgetPasswordWithPhoneContent extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
         ],
       ),
     );

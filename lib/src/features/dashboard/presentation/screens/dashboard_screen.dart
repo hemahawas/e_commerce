@@ -1,4 +1,3 @@
-import 'package:e_commerce/src/core/themes/app_colors.dart';
 import 'package:e_commerce/src/features/dashboard/data/models/bottom_nav_model.dart';
 import 'package:e_commerce/src/features/dashboard/presentation/widgets/cart_body.dart';
 import 'package:e_commerce/src/features/dashboard/presentation/widgets/dashboard_bottom_navigation_bar.dart';
@@ -10,7 +9,7 @@ import 'package:flutter/material.dart';
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
 
-  static final List<Widget> bodies = [HomeBody(), CartBody(), FavoritesBody()];
+  static final List<Widget> bodies = [const HomeBody(), const CartBody(), const FavoritesBody()];
 
   @override
   State<DashboardScreen> createState() => _DashboardScreenState();
@@ -32,7 +31,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Scaffold(
       key: scaffoldKey,
       body: SafeArea(child: DashboardScreen.bodies[currentIndex]),
-      drawer: MenuDrawer(),
+      drawer: const MenuDrawer(),
       bottomNavigationBar: DashboardBottomNavigationBar(
         bottomNavModels: bottomNavModels,
         currentIndex: currentIndex,

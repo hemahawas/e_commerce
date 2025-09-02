@@ -10,10 +10,10 @@ class AuthAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(width: 15),
+        const SizedBox(width: 15),
         CustomBackButton(onPressed: () => Navigator.pop(context)),
-        SizedBox(width: 8),
-        Text('Forgot Password', style: Styles.fontMedium16),
+        const SizedBox(width: 8),
+        const Text('Forgot Password', style: Styles.fontMedium16),
       ],
     );
   }

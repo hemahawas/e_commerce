@@ -20,7 +20,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
   int currentIndex = 0;
 
   final List<OnboardingModel> onboardingModels = [
-    OnboardingModel(
+    const OnboardingModel(
       image: Assets.imagesIllustrationOnboarding1,
       title: 'Welcome to Marketi',
       description:
@@ -28,7 +28,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
           'comfort of your fingertips Browse through a wide range of products, from fashion and electronics to home.',
       buttonText: 'Next',
     ),
-    OnboardingModel(
+    const OnboardingModel(
       image: Assets.imagesIllustrationOnboarding2,
       title: 'Easy to Buy',
       description:
@@ -36,7 +36,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
           ' shopping has never been easier.',
       buttonText: 'Next',
     ),
-    OnboardingModel(
+    const OnboardingModel(
       image: Assets.imagesIllustrationOnboarding3,
       title: 'Wonderful User Experience',
       description:
@@ -47,7 +47,6 @@ class _OnboardingBodyState extends State<OnboardingBody> {
 
   PageController pageController = PageController();
 
-  @override
   _navigate() {
     Navigator.pushReplacementNamed(context, Routes.login);
   }
@@ -79,14 +78,14 @@ class _OnboardingBodyState extends State<OnboardingBody> {
             return SvgPicture.asset(onboardingModels[currentIndex].image);
           },
         ),
-        SizedBox(height: 40),
+        const SizedBox(height: 40),
         OnboardingDotsRow(currentIndex: currentIndex),
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         Text(
           onboardingModels[currentIndex].title,
           style: Styles.fontSemiBold20,
         ),
-        SizedBox(height: 43),
+        const SizedBox(height: 43),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 27.0),
           child: Text(
@@ -95,14 +94,14 @@ class _OnboardingBodyState extends State<OnboardingBody> {
             style: Styles.fontMedium14,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         CustomButton(
           buttonText: onboardingModels[currentIndex].buttonText,
           onPressed: () {
             if (currentIndex < onboardingModels.length - 1) {
               setState(() {
                 pageController.nextPage(
-                  duration: Duration(milliseconds: 300),
+                  duration: const Duration(milliseconds: 300),
                   curve: Curves.easeIn,
                 );
               });
@@ -111,7 +110,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
             }
           },
         ),
-        SizedBox(height: 34),
+        const SizedBox(height: 34),
       ],
     );
   }

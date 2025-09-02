@@ -14,7 +14,7 @@ class SkipButton extends StatelessWidget {
         padding: const EdgeInsets.all(10), // Button padding
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
-          side: BorderSide(color: AppColors.lightBlue100),
+          side: const BorderSide(color: AppColors.lightBlue100),
         ),
       ),
       child: Text(

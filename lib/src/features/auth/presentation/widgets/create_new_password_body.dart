@@ -15,32 +15,32 @@ class CreateNewPasswordBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           AuthAppbar(
             onPressed: () => Navigator.pop(context),
             text: 'Forgot Password',
           ),
-          SizedBox(height: 44),
+          const SizedBox(height: 44),
           SvgPicture.asset(Assets.imagesIllustrationCreateNewPassword),
-          SizedBox(height: 22),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 22.0),
+          const SizedBox(height: 22),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 22.0),
             child: Text(
               textAlign: TextAlign.center,
               'New password must be different from last password',
               style: Styles.fontMedium16,
             ),
           ),
-          SizedBox(height: 22),
+          const SizedBox(height: 22),
           PasswordField(changeVisibility: () {}, isPasswordVisible: false),
-          SizedBox(height: 22),
+          const SizedBox(height: 22),
           PasswordField(changeVisibility: () {}, isPasswordVisible: false),
-          SizedBox(height: 22),
+          const SizedBox(height: 22),
           CustomButton(
             buttonText: 'Save Password',
             onPressed: () {
               Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (_) => CongratulationsScreen()),
+                MaterialPageRoute(builder: (_) => const CongratulationsScreen()),
               );
             },
           ),

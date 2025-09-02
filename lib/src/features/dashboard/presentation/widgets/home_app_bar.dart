@@ -1,4 +1,5 @@
 import 'package:e_commerce/src/core/themes/styles.dart';
+import 'package:e_commerce/src/features/dashboard/presentation/widgets/profile_image.dart';
 import 'package:flutter/material.dart';
 
 class HomeAppBar extends StatelessWidget {
@@ -7,7 +8,7 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(),
+      leading: const ProfileImage(),
       title: const Text('Hi Yousef !', style: Styles.fontMedium20),
       trailing: IconButton(
         icon: const Icon(Icons.notifications_outlined),

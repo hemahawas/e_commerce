@@ -17,7 +17,7 @@ class PasswordField extends StatelessWidget {
       title: title,
       hintText: 'Password',
       isPassword: !isPasswordVisible,
-      prefixIcon: Icon(Icons.lock_outline),
+      prefixIcon: const Icon(Icons.lock_outline),
       suffixIcon: IconButton(
         icon: Icon(
           isPasswordVisible

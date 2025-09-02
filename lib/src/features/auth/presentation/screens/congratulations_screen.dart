@@ -14,9 +14,9 @@ class CongratulationsScreen extends StatelessWidget {
             child: Column(
               spacing: 30,
               children: [
-                Text('Congratulations', style: Styles.fontMedium24),
+                const Text('Congratulations', style: Styles.fontMedium24),
 
-                Text(
+                const Text(
                   'You have updated the password. please login again with your latest password',
                   style: Styles.fontMedium16,
                   textAlign: TextAlign.center,

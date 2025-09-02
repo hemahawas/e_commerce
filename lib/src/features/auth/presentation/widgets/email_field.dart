@@ -11,7 +11,7 @@ class EmailField extends StatelessWidget {
       title: title,
       inputType: TextInputType.emailAddress,
       hintText: 'Enter your email',
-      prefixIcon: Icon(Icons.email_outlined),
+      prefixIcon: const Icon(Icons.email_outlined),
     );
   }
 }

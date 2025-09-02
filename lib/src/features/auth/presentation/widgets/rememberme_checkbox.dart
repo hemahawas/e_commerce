@@ -24,7 +24,7 @@ class RemembermeCheckbox extends StatelessWidget {
             activeColor: AppColors.lightBlue100,
           ),
         ),
-        Text('Remember me', style: Styles.fontRegular14),
+        const Text('Remember me', style: Styles.fontRegular14),
       ],
     );
   }
